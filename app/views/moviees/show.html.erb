@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @moviee.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @moviee.description %>
+</p>
+
+<p>
+  <strong>Movie length:</strong>
+  <%= @moviee.movie_length %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= @moviee.director %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @moviee.rating %>
+</p>
+
+<%= link_to 'Edit', edit_moviee_path(@moviee) %> |
+<%= link_to 'Back', moviees_path %>

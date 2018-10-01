@@ -1,0 +1,2 @@
+class Moviee < ApplicationRecord
+end
