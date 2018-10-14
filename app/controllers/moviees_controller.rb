@@ -1,5 +1,6 @@
 class MovieesController < ApplicationController
   before_action :set_moviee, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /moviees
   # GET /moviees.json
@@ -14,7 +15,7 @@ class MovieesController < ApplicationController
 
   # GET /moviees/new
   def new
-    @moviee = Moviee.new
+    @moviee = current_user.moviees.build
   end
 
   # GET /moviees/1/edit
@@ -24,7 +25,7 @@ class MovieesController < ApplicationController
   # POST /moviees
   # POST /moviees.json
   def create
-    @moviee = Moviee.new(moviee_params)
+    @moviee = current_user.moviees.build(moviee_params)
 
     respond_to do |format|
       if @moviee.save
@@ -69,6 +70,6 @@ class MovieesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def moviee_params
-      params.require(:moviee).permit(:title, :description, :movie_length, :director, :rating)
+      params.require(:moviee).permit(:title, :description, :movie_length, :director, :rating, :image)
     end
 end
