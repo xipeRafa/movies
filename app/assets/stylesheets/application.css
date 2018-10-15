@@ -1,57 +1,60 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
 
 body{
-   margin-top:80px; 
-   color:lightblue;
-   font-family: sans-serif;
-   background-color: #222;
-   text-align: center;
+
+  color:lightblue;
+  font-family: sans-serif;
+  background-color: #222;
+  text-align: center;
+}
+* { 
+  outline: none !important;
+  -moz-outline-style: none !important;
+}
+nav{
+   display: flex;
+  justify-content: space-between;
+
+}
+@media (max-width: 500px) {
+    nav{flex-direction: column;}
+    nav div ul{
+       margin-top: 30px;
+    }
+}
+nav div ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
 }
 a{
-    color:#fff;
-    text-decoration-line: none;
-    margin: 10px;
-    padding: 2px 5px;
-    user-select: none;
-    overflow: hidden;
-   }
+  color:#fff;
+  text-decoration-line: none;
+  margin: 10px;
+  padding: 2px 5px;
+  user-select: none;
+  overflow: hidden;
+}
 a:hover{
-    color:#999;
+  color:#999;
 }
 strong{
-    margin-left:  40px;
+  margin-left:  40px;
 }
 td,th{
-    padding:10px 40px;
+ padding:10px 40px;
     text-decoration-line: none;
     text-align: center;
 }
-
-
-
 table{
-    width: 100%;
+  width: 100%;
   border-left:1px solid rgba(86, 97, 243, 0.808);
   border-right:1px solid rgba(86, 97, 243, 0.808);
-   margin: ;
-   text-align: center;
+  margin: ;
+  text-align: center;
 }
 input,textarea{
     width: 50%;
+    color:#333;
   
 }
 label{
