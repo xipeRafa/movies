@@ -15,10 +15,11 @@
  */
 
 body{
-   margin-top:5%; 
+   margin-top:80px; 
    color:lightblue;
    font-family: sans-serif;
    background-color: #222;
+   text-align: center;
 }
 a{
     color:#fff;
@@ -27,34 +28,50 @@ a{
     padding: 2px 5px;
     user-select: none;
     overflow: hidden;
-   
-}
+   }
 a:hover{
-   
     color:#999;
-    
+}
+strong{
+    margin-left:  40px;
 }
 td,th{
     padding:10px 40px;
     text-decoration-line: none;
- 
-    
-}
-tr:nth-child(2n+1){
-   background-color: #444;
+    text-align: center;
 }
 
+
+
 table{
-   border:1px solid gray;
-   margin:  0;
+    width: 100%;
+  border-left:1px solid rgba(86, 97, 243, 0.808);
+  border-right:1px solid rgba(86, 97, 243, 0.808);
+   margin: ;
+   text-align: center;
 }
 input,textarea{
     width: 50%;
-    margin-left:25%;
+  
 }
 label{
     margin-left:25%;
+    text-align:left;
+   
 }
+thead{
+    text-align: center;
+    background-color: rgba(86, 97, 243, 0.808);
+    color:#fff;
+}
+thead tr th{
+    text-align: center;
+}
+tbody tr td{
+    text-align: center;
+    
+}
+
 
 
 //------------forms
@@ -86,12 +103,12 @@ a {color: #1eaedb;}
 
 a:hover {color: #0fa0ce;} 
 
-.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+.button, button, input[type="submit"], input[type="reset"], input[type="button"],  input[type="file"] {
 
     display: inline-block;
     height: 42px;
     padding: 13px 30px;
-   color: #fff;
+    color: #fff;
     text-align: center;
     font-size: 14px;
     font-weight: 600;

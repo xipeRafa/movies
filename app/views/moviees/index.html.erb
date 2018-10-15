@@ -1,7 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Moviees</h1>
-
+<p>
+<%= link_to 'New Moviee', new_moviee_path, class: 'button' %>
+</p>
 <table>
   <thead>
     <tr>
@@ -11,14 +10,16 @@
       <th>Movie length</th>
       <th>Director</th>
       <th>Rating</th>
-      <th colspan="3"></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
     </tr>
   </thead>
 
   <tbody>
     <% @moviees.each do |moviee| %>
       <tr>
-        <td><%= link_to image_tag(moviee.image, style: 'width:20%;') %></td>
+        <td><%= link_to image_tag(moviee.image, style: 'width:100px;') %></td>
         <td><%= moviee.title %></td>
         <td><%= moviee.description %></td>
         <td><%= moviee.movie_length %></td>
@@ -34,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Moviee', new_moviee_path %>
+

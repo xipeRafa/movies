@@ -1,11 +1,15 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Title:</strong>
   <%= @moviee.title %>
+  <%= link_to 'Edit', edit_moviee_path(@moviee) %> |
+<%= link_to 'Back', moviees_path %>
+
 </p>
+
 <p>
-  <%= link_to image_tag(@moviee.image, style: 'width:50%'), moviee_path %>
+  <%= link_to image_tag(@moviee.image, style: 'width:80%'), moviee_path %>
 </p>
 
 <p>
@@ -16,17 +20,16 @@
 <p>
   <strong>Movie length:</strong>
   <%= @moviee.movie_length %>
-</p>
 
-<p>
   <strong>Director:</strong>
   <%= @moviee.director %>
-</p>
 
-<p>
   <strong>Rating:</strong>
   <%= @moviee.rating %>
 </p>
 
-<%= link_to 'Edit', edit_moviee_path(@moviee) %> |
+
+<p>
+ <%= link_to 'Edit', edit_moviee_path(@moviee) %> |
 <%= link_to 'Back', moviees_path %>
+</p>
