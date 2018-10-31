@@ -1,3 +1,4 @@
-class Review < ApplicationRecord
-    belongs_to :user
+class Review < ActiveRecord::Base
+	belongs_to :user
+	belongs_to :movie
 end
